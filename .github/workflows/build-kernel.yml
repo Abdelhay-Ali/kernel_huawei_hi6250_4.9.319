@@ -3,10 +3,7 @@ name: Build Kernel
 on:
   push:
     branches: master
-    
-    types: [started]
-
-   workflow_dispatch:
+    workflow_dispatch:
  
 jobs:
   build:
