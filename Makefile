@@ -4,8 +4,6 @@ SUBLEVEL = 319
 EXTRAVERSION = Abdalhey-Ali-V3-2023
 NAME = Roaring Lionus
 
-export CROSS_COMPILE=/home/abdelhay/2/tc1/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-elf/bin/aarch64-elf-
-
 # *DOCUMENTATION*
 # To see a list of typical targets execute "make help"
 # More info can be located in ./README
