@@ -19,13 +19,13 @@ jobs:
         path: zipper
 
     - name: Android kernel build
-      uses: lemniskett/android-kernel-actions@master
+      uses: Abdelhay-Ali/android-kernel-actions@master
       id: build
       env:
         NAME: Dark-Ages-Último
       with:
         arch: arm64
-        compiler: gcc/9
+        compiler: gcc/7
         defconfig: phenix_defconfig
         image: Image.gz-dtb
 
