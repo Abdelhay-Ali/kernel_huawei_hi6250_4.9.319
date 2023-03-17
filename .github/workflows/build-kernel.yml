@@ -3,7 +3,11 @@ name: Build Kernel
 on:
   push:
     branches: master
-    workflow_dispatch:
+    
+    types: [started]
+
+   workflow_dispatch:
+ 
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,7 +28,7 @@ jobs:
         NAME: Dark-Ages-Último
       with:
         arch: arm64
-        compiler: gcc/10
+        compiler: gcc/7
         defconfig: phenix_defconfig
         image: Image.gz-dtb
 
