@@ -25,7 +25,7 @@ jobs:
       with:
         arch: arm64
         compiler: gcc/10
-        defconfig: vince_defconfig
+        defconfig: phenix_defconfig
         image: Image.gz-dtb
 
     - name: Release build
