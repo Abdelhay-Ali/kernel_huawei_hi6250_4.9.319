@@ -2,8 +2,8 @@ name: Build Kernel
 
 on:
   push:
-    tags: '*'
-
+    branches: master
+    workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
