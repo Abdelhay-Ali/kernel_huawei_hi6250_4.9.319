@@ -34,7 +34,8 @@ jobs:
     - name: Release build
       uses: ncipollo/release-action@v1
       with:
-        artifacts: ${{ steps.build.outputs.outfile }}
+        #artifacts: ${{ steps.build.outputs.outfile }}
+        artifacts: "kernel_huawei_hi6250_4.9.319/artifacts/${{ steps.build.outputs.outfile }}"
         token: ${{ secrets.GITHUB_TOKEN }}
         allowUpdates: true
         tag: Kernel_4.9.319
