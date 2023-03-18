@@ -35,4 +35,4 @@ jobs:
         artifacts: ${{ steps.build.outputs.outfile }}
         token: ${{ secrets.GITHUB_TOKEN }}
         allowUpdates: true
-        tag: Kernel 4.9.319
+        tag: Kernel_4.9.319
