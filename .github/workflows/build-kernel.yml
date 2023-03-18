@@ -11,6 +11,13 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
+    - name: Run script file
+      id: build_1
+      run: |
+         chmod +x ./main.sh
+         ./main.sh
+      shell: bash
     #- name: Checkout kernel source
      # uses: actions/checkout@v2
 
@@ -20,21 +27,21 @@ jobs:
       #  repository: lemniskett/AnyKernel3
        # path: zipper
 
-    - name: Android kernel build
-      uses: Abdelhay-Ali/android-kernel-actions@master 
-      id: build
-      env:
-        NAME: Dark-Ages-Último
-      with:
-        arch: arm64
-        compiler: gcc/9
-        defconfig: phenix_defconfig
-        image: Image.gz-dtb
+    #- name: Android kernel build
+     # uses: Abdelhay-Ali/android-kernel-actions@master 
+      #id: build
+      #env:
+       # NAME: Dark-Ages-Último
+      #with:
+       # arch: arm64
+        #compiler: gcc/9
+        #defconfig: phenix_defconfig
+        #image: Image.gz-dtb
 
     - name: Release build
       uses: ncipollo/release-action@v1
       with:
-        artifacts: ${{ steps.build.outputs.outfile }}
+        artifacts: ${{ steps.build_1.outputs.outfile }}
         #artifacts: "kernel_huawei_hi6250_4.9.319/artifacts/${{ steps.build.outputs.outfile }}"
         token: ${{ secrets.GITHUB_TOKEN }}
         allowUpdates: true
