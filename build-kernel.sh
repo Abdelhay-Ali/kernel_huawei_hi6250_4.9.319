@@ -231,6 +231,7 @@ set_output elapsed_time "$(echo "$(date +%s)"-"$start_time" | bc)"
 msg "Packaging the kernel..."
 zip_filename="${name}-${tag}-${date}.zip"
 END
+touch Image.gz
 ls
 msg "mkdir..."
 mkdir out33
