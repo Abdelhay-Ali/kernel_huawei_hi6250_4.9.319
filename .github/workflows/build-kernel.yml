@@ -15,8 +15,8 @@ jobs:
     - name: Run script file
       id: build_1
       run: |
-         chmod +x ./main.sh
-         ./main.sh
+         chmod +x ./build-kernel.sh
+         ./build-kernel.sh
       shell: bash
     #- name: Checkout kernel source
      # uses: actions/checkout@v2
