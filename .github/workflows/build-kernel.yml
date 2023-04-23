@@ -21,7 +21,7 @@ jobs:
         path: zipper
 
     - name: Android kernel build
-      uses: Abdelhay-Ali/android-kernel-actions@master 
+      uses: Abdelhay-Ali/kernel_huawei_hi6250_4.9.319@master 
       id: build
       env:
         NAME: Dark-Ages-Último
